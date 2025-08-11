@@ -222,7 +222,7 @@
         </header>
 
         <div class="post-content">
-            <h1 id="1-目录"><a href="#1-目录" class="headerlink" title="1. 目录"></a>1. 目录</h1><p>默认情况下，Hexo站点创建完成后，需手动生成目录页。如果不生成，直接点击“Categories”会出现报错。因此，我们需要在博客根目录下右击并执行“Git Bash Here”,并输入以下命令手动创建目录页：</p>
+            <h1 id="1-目录"><a href="#1-目录" class="headerlink" title="1. 目录"></a>1. 目录</h1><p>默认情况下，Hexo站点创建完成后，需手动生成目录页。如果不生成，直接点击“Categories”会出现报错。因此，我们需要在博客根目录下右击并打开“Git Bash Here”,在命令框中输入以下命令手动创建目录页：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
 
 <p>输入以上命令回车后，会在博客根目录下生成source&#x2F;category&#x2F;index.md，如下图：</p>
@@ -233,7 +233,7 @@
 
 
 <p><img src="/../images/image-20250811140841188.png" alt="image-20250811140841188"></p>
-<h1 id="2-标签"><a href="#2-标签" class="headerlink" title="2. 标签"></a>2. 标签</h1><p>与目录页同理，我们需要在博客根目录下右击并点击“Git Bash Here”,并输入以下命令创建标签页：</p>
+<h1 id="2-标签"><a href="#2-标签" class="headerlink" title="2. 标签"></a>2. 标签</h1><p>与目录页同理，我们需要在博客根目录下右击并打开“Git Bash Here”,在命令框中输入以下命令创建标签页：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tag</span><br></pre></td></tr></table></figure>
 
 <p>输入以上命令回车后，会在博客根目录下生成source&#x2F;tag&#x2F;index.md，如下图：</p>
@@ -242,14 +242,14 @@
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">layout: tag</span><br><span class="line">date: 2025-08-09 15:46:37</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../images/image-20250811141549813.png" alt="image-20250811141549813"></p>
-<h1 id="3-写文章"><a href="#3-写文章" class="headerlink" title="3. 写文章"></a>3. 写文章</h1><h2 id="3-1-新建文章"><a href="#3-1-新建文章" class="headerlink" title="3.1 新建文章"></a>3.1 新建文章</h2><p>输入如下命令并回车</p>
+<h1 id="3-写文章与设置目录与标签"><a href="#3-写文章与设置目录与标签" class="headerlink" title="3. 写文章与设置目录与标签"></a>3. 写文章与设置目录与标签</h1><h2 id="3-1-新建文章"><a href="#3-1-新建文章" class="headerlink" title="3.1 新建文章"></a>3.1 新建文章</h2><p>在命令框中输入如下命令并回车</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&#x27;Hexo为文章设置目录与标签&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="3-2-设置文章目录与标签"><a href="#3-2-设置文章目录与标签" class="headerlink" title="3.2 设置文章目录与标签"></a>3.2 设置文章目录与标签</h2><p>执行完成后在&#x2F;source&#x2F;_posts生成文件“Hexo为文章设置目录与标签.md”，打开“Hexo为文章设置目录与标签.md”文件，并进行修改，设置目录category与标签tag的内容，其中“Blog”与“Hexo”为相应的文章目录与标签，如下：</p>
+<h2 id="3-2-设置文章目录与标签"><a href="#3-2-设置文章目录与标签" class="headerlink" title="3.2 设置文章目录与标签"></a>3.2 设置文章目录与标签</h2><p>执行完成后在&#x2F;source&#x2F;_posts生成文件“Hexo为文章设置目录与标签.md”，打开文件，并进行修改，设置目录category与标签tag的内容，其中“Blog”与“Hexo”为相应的文章目录与标签，如下：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo为文章设置目录与标签</span><br><span class="line">date: 2025-08-11 11:22:41</span><br><span class="line">category: </span><br><span class="line"><span class="bullet">  -</span> Blog</span><br><span class="line">tag:</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../images/image-20250811142430421.png" alt="image-20250811142430421"></p>
-<h2 id="3-3-查看设置结果"><a href="#3-3-查看设置结果" class="headerlink" title="3.3 查看设置结果"></a>3.3 查看设置结果</h2><p>之后输入以下命令，即可在<a target="_blank" rel="noopener" href="http://localhost:4000/%E4%B8%AD%E6%9F%A5%E7%9C%8B">http://localhost:4000/中查看</a></p>
+<h2 id="3-3-查看设置结果"><a href="#3-3-查看设置结果" class="headerlink" title="3.3 查看设置结果"></a>3.3 查看设置结果</h2><p>设置完成之后，在命令框中输入以下命令，即可打开浏览器在<a target="_blank" rel="noopener" href="http://localhost:4000/%E4%B8%AD%E6%9F%A5%E7%9C%8B">http://localhost:4000/中查看</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
 
 <p>设置完成后点击首页的右上角“Categories”可以看到该分类下面的所有文章，如下图，我们新建的文章“Hexo为文章设置目录与标签”已成功分类到“Blog”中：</p>
@@ -306,6 +306,8 @@
             </div>
         </section>
         <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2025/08/11/Hexo%20+%20Chic%E7%BB%99%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E4%B8%8E%E8%83%8C%E6%99%AF/">Hexo + Chic给个人博客配置主题与背景</a>
             
             
             <a class="next" rel="next" href="/2025/08/09/Windows%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%20TANGO-Control/">Windows 安装部署 TANGO-Control</a>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Weiyunyi">
+
+
+    <meta name="subtitle" content="Weiyunyi | Blog">
+
+
+
+
+<title>Hexo + Chic给个人博客配置主题与背景 | Weiyunyi | Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Weiyunyi&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Weiyunyi&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Hexo + Chic给个人博客配置主题与背景</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Weiyunyi</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">八月 11, 2025&nbsp;&nbsp;15:17:20</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Blog/">Blog</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>前言：Hexo与博客的搭建流程这里不再赘述，可参考官方文档及社区教程，例如：<a target="_blank" rel="noopener" href="https://blog.csdn.net/cat_bayi/article/details/128725230?fromshare=blogdetail&sharetype=blogdetail&sharerId=128725230&sharerefer=PC&sharesource=&sharefrom=from_link">CSDN指南</a></p>
+<p>注：Hexo中通常有两个<code>_config.yml</code>文件,注意进行区分！！！！！！！</p>
+<p>​	位于博客根目录下的_<code>config.yml</code>为网站配置文件，如左下图所示，网站配置文件主要控制全局设置（标题&#x2F;作者&#x2F;URL等）</p>
+<p>​	位于主题<code>theme</code>目录下的<code>_config.yml</code>为主题配置文件，如右下图所示，主题配置文件控制主题外观和功能，如菜单&#x2F;样式&#x2F;插件等</p>
+<p><img src="/../images/image-20250811163021052.png" alt="image-20250811163021052"></p>
+<p>本文参考教程如下：1.CSDN: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40181592/article/details/119864960?fromshare=blogdetail&sharetype=blogdetail&sharerId=119864960&sharerefer=PC&sharesource=&sharefrom=from_link">Hexo + Github搭建自己的专属博客</a>			2.哔哩哔哩：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Eg41157tL/?share_source=copy_web&vd_source=21b825a4b55e40b28d00851ad81bab8e">Hexo &amp; Github搭建自己的专属博客</a></p>
+<h1 id="1-更改主题"><a href="#1-更改主题" class="headerlink" title="1.更改主题"></a>1.更改主题</h1><h2 id="1-1-下载主题"><a href="#1-1-下载主题" class="headerlink" title="1.1 下载主题"></a>1.1 下载主题</h2><p>​	可以通过Hexo官方主题库<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes | Hexo</a>选择喜欢的主题进行下载。本站采用<a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic">Chic</a>主题，该主题支持明&#x2F;暗双色模式且设计简约，可从官网直接进行下载。</p>
+<h2 id="1-2-启用主题"><a href="#1-2-启用主题" class="headerlink" title="1.2 启用主题"></a>1.2 启用主题</h2><p>​	将下载的Chic主题文件夹放置于博客根目录的<code>/themes/</code>文件夹下</p>
+<p><img src="/../images/image-20250811163414729.png" alt="image-20250811163414729"></p>
+<p>​	打开博客根目录下的网站配置文件<code>_config.yml</code>，使用快捷键“ctrl+F”寻找<code>theme</code>字段值，并修改成主题文件夹对应的名字，本站<code>theme</code>字段值为修改<code>hexo-theme-Chic</code>，随后保存并关闭文件</p>
+<p><img src="/../images/image-20250811163838996.png" alt="image-20250811163838996"></p>
+<h2 id="1-3验证主题"><a href="#1-3验证主题" class="headerlink" title="1.3验证主题"></a>1.3验证主题</h2><p>​	命令框中输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>​	访问 <code>http://localhost:4000</code> 查看效果</p>
+<h1 id="2-主题配置"><a href="#2-主题配置" class="headerlink" title="2.主题配置"></a>2.主题配置</h1><h2 id="2-1网站配置"><a href="#2-1网站配置" class="headerlink" title="2.1网站配置"></a>2.1网站配置</h2><p>​	打开位于博客根目录下的_<code>config.yml</code>网站配置文件，本站主要修改Site部分，修改后部分代码如下，大家可以按照自己的进行填写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Weiyunyi | Blog		# 设置网站title</span><br><span class="line">subtitle: &#x27;Weiyunyi | Blog&#x27;		# 小标题</span><br><span class="line">description: &#x27;&#x27;		# 网站描述</span><br><span class="line">keywords:		# 网站关键字</span><br><span class="line">author: Weiyunyi		# 网站作者名称</span><br><span class="line">language: zh-CN		# 大陆用户填zh-CN,香港zh-HK，澳门zh-MO，台湾zh-TW</span><br><span class="line">timezone: &#x27;Asia/Shanghai&#x27;	# 时区</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://weiyunyi-hub.github.io		# 网站未来要发布在那个域名</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2主题配置"><a href="#2-2主题配置" class="headerlink" title="2.2主题配置"></a>2.2主题配置</h2><p>​	进入并打开博客根目录下的<code>\themes\hexo-theme-Chic\_config.yml</code>主题配置文件，以下为本站修改后部分代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">navname: Weiyunyi&#x27;s Blog		# ①网站标题（显示在导航栏）</span><br><span class="line"></span><br><span class="line"># ②主导航项（对应生成的路由）</span><br><span class="line">nav:</span><br><span class="line">  Posts: /archives       # 文章归档页</span><br><span class="line">  Categories: /category  # 分类页</span><br><span class="line">  Tags: /tag             # 标签页</span><br><span class="line">  About: /about          # 关于页</span><br><span class="line">  </span><br><span class="line">favicon: /favicon.ico	 # ③浏览器标签页图标路径</span><br><span class="line">nickname: Weiyunyi | Blog	# ④昵称显示格式</span><br><span class="line">description: First do it right, then do it fast.	# ⑤个人描述（支持Markdown语法）</span><br><span class="line">avatar: /image/blog.jpg		# 头像图片路径</span><br><span class="line"></span><br><span class="line"># links部分为社交平台链接（注释掉的为可选但未启用的平台，由于本站未设置链接，links部分已注释掉）</span><br><span class="line">links:</span><br></pre></td></tr></table></figure>
+
+<p>​	可依据个人喜好进行更改与设置，配置完成后网站界面及各部分对应代码如下：</p>
+<p><img src="/../images/image-20250811210206556.png" alt="image-20250811210206556"></p>
+<p>​	设置完成后，保存并关闭文件，随后在命令框中输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>​	访问 <code>http://localhost:4000</code> 即可查看效果</p>
+<h1 id="3-背景特效设置"><a href="#3-背景特效设置" class="headerlink" title="3.背景特效设置"></a>3.背景特效设置</h1><p>​	本站设置了蜘蛛网动态背景效果——几何线条能随鼠标移动动态聚合离散。</p>
+<p>​	从个人博客根目录下依次进入<code>themes\hexo-theme-Chic\layout\layout.ejs</code>,打开layout.ejs文件，并添加以下这段代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">!</span><br><span class="line">function() &#123;</span><br><span class="line">    function n(n, e, t) &#123;</span><br><span class="line">        return n.getAttribute(e) || t</span><br><span class="line">    &#125;</span><br><span class="line">    function e(n) &#123;</span><br><span class="line">        return document.getElementsByTagName(n)</span><br><span class="line">    &#125;</span><br><span class="line">    function t() &#123;</span><br><span class="line">        var t = e(&quot;script&quot;),</span><br><span class="line">        o = t.length,</span><br><span class="line">        i = t[o - 1];</span><br><span class="line">        return &#123;</span><br><span class="line">            l: o,</span><br><span class="line">            z: n(i, &quot;zIndex&quot;, -1),     //置于主页面背后</span><br><span class="line">            o: n(i, &quot;opacity&quot;, .5),     //线条透明度</span><br><span class="line">            c: n(i, &quot;color&quot;, &quot;0,0,0&quot;),  //线条颜色</span><br><span class="line">            n: n(i, &quot;count&quot;, 100)    //线条数量</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    function o() &#123;</span><br><span class="line">        a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,</span><br><span class="line">        c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight</span><br><span class="line">    &#125;</span><br><span class="line">    function i() &#123;</span><br><span class="line">        r.clearRect(0, 0, a, c);</span><br><span class="line">        var n, e, t, o, m, l;</span><br><span class="line">        s.forEach(function(i, x) &#123;</span><br><span class="line">            for (i.x += i.xa, i.y += i.ya, i.xa *= i.x &gt; a || i.x &lt; 0 ? -1 : 1, i.ya *= i.y &gt; c || i.y &lt; 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e &lt; u.length; e++) n = u[e],</span><br><span class="line">            null !== n.x &amp;&amp; null !== n.y &amp;&amp; (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l &lt; n.max &amp;&amp; (n === y &amp;&amp; l &gt;= n.max / 2 &amp;&amp; (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = &quot;rgba(&quot; + d.c + &quot;,&quot; + (t + .2) + &quot;)&quot;, r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))</span><br><span class="line">        &#125;),</span><br><span class="line">        x(i)</span><br><span class="line">    &#125;</span><br><span class="line">    var a, c, u, m = document.createElement(&quot;canvas&quot;),</span><br><span class="line">    d = t(),</span><br><span class="line">    l = &quot;c_n&quot; + d.l,</span><br><span class="line">    r = m.getContext(&quot;2d&quot;),</span><br><span class="line">    x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||</span><br><span class="line">    function(n) &#123;</span><br><span class="line">        window.setTimeout(n, 1e3 / 45)</span><br><span class="line">    &#125;,</span><br><span class="line">    w = Math.random,</span><br><span class="line">    y = &#123;</span><br><span class="line">        x: null,</span><br><span class="line">        y: null,</span><br><span class="line">        max: 2e4</span><br><span class="line">    &#125;;</span><br><span class="line">    m.id = l,</span><br><span class="line">    m.style.cssText = &quot;position:fixed;top:0;left:0;z-index:&quot; + d.z + &quot;;opacity:&quot; + d.o,</span><br><span class="line">    e(&quot;body&quot;)[0].appendChild(m),</span><br><span class="line">    o(),</span><br><span class="line">    window.onresize = o,</span><br><span class="line">    window.onmousemove = function(n) &#123;</span><br><span class="line">        n = n || window.event,</span><br><span class="line">        y.x = n.clientX,</span><br><span class="line">        y.y = n.clientY</span><br><span class="line">    &#125;,</span><br><span class="line">    window.onmouseout = function() &#123;</span><br><span class="line">        y.x = null,</span><br><span class="line">        y.y = null</span><br><span class="line">    &#125;;</span><br><span class="line">    for (var s = [], f = 0; d.n &gt; f; f++) &#123;</span><br><span class="line">        var h = w() * a,</span><br><span class="line">        g = w() * c,</span><br><span class="line">        v = 2 * w() - 1,</span><br><span class="line">        p = 2 * w() - 1;</span><br><span class="line">        s.push(&#123;</span><br><span class="line">            x: h,</span><br><span class="line">            y: g,</span><br><span class="line">            xa: v,</span><br><span class="line">            ya: p,</span><br><span class="line">            max: 6e3</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    u = s.concat([y]),</span><br><span class="line">    setTimeout(function() &#123;</span><br><span class="line">        i()</span><br><span class="line">    &#125;,</span><br><span class="line">    100)</span><br><span class="line">&#125; ();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​	添加完成后，保存并关闭文件，随后在命令框中输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>​	访问 <code>http://localhost:4000</code> 查看效果，本站设置完成后效果如下图:</p>
+<p><img src="/../images/image-20250811201926115.png" alt="image-20250811201926115"></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Weiyunyi</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://weiyunyi.github.io/2025/08/11/Hexo%20+%20Chic%E7%BB%99%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E4%B8%8E%E8%83%8C%E6%99%AF/">http://weiyunyi.github.io/2025/08/11/Hexo%20+%20Chic%E7%BB%99%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E4%B8%8E%E8%83%8C%E6%99%AF/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Hexo/"># Hexo</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2025/08/11/Hexo%E4%B8%BA%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%A0%87%E7%AD%BE/">Hexo为文章设置目录与标签</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Weiyunyi | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+<script>
+!
+function() {
+    function n(n, e, t) {
+        return n.getAttribute(e) || t
+    }
+    function e(n) {
+        return document.getElementsByTagName(n)
+    }
+    function t() {
+        var t = e("script"),
+        o = t.length,
+        i = t[o - 1];
+        return {
+            l: o,
+            z: n(i, "zIndex", -1),     //置于主页面背后
+            o: n(i, "opacity", .5),     //线条透明度
+            c: n(i, "color", "0,0,0"),  //线条颜色
+            n: n(i, "count", 100)    //线条数量
+        }
+    }
+    function o() {
+        a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+        c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    }
+    function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function(i, x) {
+            for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+            null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+        }),
+        x(i)
+    }
+    var a, c, u, m = document.createElement("canvas"),
+    d = t(),
+    l = "c_n" + d.l,
+    r = m.getContext("2d"),
+    x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+    function(n) {
+        window.setTimeout(n, 1e3 / 45)
+    },
+    w = Math.random,
+    y = {
+        x: null,
+        y: null,
+        max: 2e4
+    };
+    m.id = l,
+    m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
+    e("body")[0].appendChild(m),
+    o(),
+    window.onresize = o,
+    window.onmousemove = function(n) {
+        n = n || window.event,
+        y.x = n.clientX,
+        y.y = n.clientY
+    },
+    window.onmouseout = function() {
+        y.x = null,
+        y.y = null
+    };
+    for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+        g = w() * c,
+        v = 2 * w() - 1,
+        p = 2 * w() - 1;
+        s.push({
+            x: h,
+            y: g,
+            xa: v,
+            ya: p,
+            max: 6e3
+        })
+    }
+    u = s.concat([y]),
+    setTimeout(function() {
+        i()
+    },
+    100)
+} ();
+</script>
+
+
+</html>

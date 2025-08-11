@@ -15,7 +15,7 @@
 
 
 
-<title>Windows 安装部署 TANGO-Control | Weiyunyi | Blog</title>
+<title>Hexo为文章设置目录与标签 | Weiyunyi | Blog</title>
 
 
 
@@ -197,7 +197,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Windows 安装部署 TANGO-Control</h1>
+            <h1 class="post-title">Hexo为文章设置目录与标签</h1>
             
                 <div class="post-meta">
                     
@@ -206,14 +206,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">八月 9, 2025&nbsp;&nbsp;15:46:19</a>
+                        Date: <a href="#">八月 11, 2025&nbsp;&nbsp;11:22:41</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Tango/">Tango</a>
+                                <a href="/categories/Blog/">Blog</a>
                             
                         </span>
                     
@@ -222,115 +222,40 @@
         </header>
 
         <div class="post-content">
-            <h2 id="1-下载安装jdk"><a href="#1-下载安装jdk" class="headerlink" title="1.下载安装jdk"></a>1.下载安装jdk</h2><p><img src="/../images/11.png" alt="11"></p>
-<p>可参考b站教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1HG411E7Ue/?spm_id_from=333.1391.0.0&vd_source=2cbbfb29eb104eaddf4e845f1d91b08d">https://www.bilibili.com/video/BV1HG411E7Ue/?spm_id_from=333.1391.0.0&amp;vd_source=2cbbfb29eb104eaddf4e845f1d91b08d</a></p>
-<h2 id="2-安装配置mysql数据库"><a href="#2-安装配置mysql数据库" class="headerlink" title="2. 安装配置mysql数据库"></a>2. 安装配置mysql数据库</h2><h3 id="2-1-双击mysql-5-5-60-winx64-msi"><a href="#2-1-双击mysql-5-5-60-winx64-msi" class="headerlink" title="2.1 双击mysql-5.5.60-winx64.msi"></a>2.1 双击mysql-5.5.60-winx64.msi</h3><p><img src="/../images/21.png" alt="21"></p>
-<h3 id="2-2-安装过程"><a href="#2-2-安装过程" class="headerlink" title="2.2 安装过程"></a>2.2 安装过程</h3><ol>
-<li><p>选择next</p>
-<p><img src="/../images/22.png" alt="image-20250809160346761"></p>
-</li>
-<li><p>选择I accept……</p>
-<p><img src="/../images/23.png" alt="image-20250809160456995"></p>
-</li>
-<li><p>选择Custom</p>
-<p><img src="/../images/24.png" alt="image-20250809160516158"></p>
-</li>
-<li><p>点击change，并选择tango_root文件夹下的mysql文件夹，后点击next</p>
-<p><img src="/../images/25.png" alt="image-20250809160558721"></p>
-<p><img src="/../images/26.png" alt="image-20250809160706116"></p>
-</li>
-<li><p>点击Install</p>
-<p><img src="/../images/image-20250809160739810.png" alt="image-20250809160739810"></p>
-<p><img src="/../images/image-20250809160746756-175473897954310.png" alt="image-20250809160746756"></p>
-</li>
-<li><p>点击Next</p>
-<p><img src="/../images/image-20250809160808977.png" alt="image-20250809160808977"></p>
-</li>
-<li><p>点击Finish</p>
-<p><img src="/../images/image-20250809160833871.png" alt="image-20250809160833871"></p>
-</li>
-<li><p>点击Next</p>
-<p><img src="/../images/image-20250809160934411.png" alt="image-20250809160934411"></p>
-</li>
-<li><p>选择Standard Configuation</p>
-<p><img src="/../images/image-20250809161007013.png" alt="image-20250809161007013"></p>
-<p><img src="/../images/image-20250809161041820.png" alt="image-20250809161041820"></p>
-</li>
-<li><p>取消勾选Modify Security Settings</p>
-<p><img src="/../images/image-20250809161124309.png" alt="image-20250809161124309"></p>
-</li>
-<li><p>点击Finish，即安装完成，接下来需要将mysql路径添加到环境变量中</p>
-<p><img src="/../images/image-20250809161151244.png" alt="image-20250809161151244"></p>
-</li>
-</ol>
-<h3 id="2-3-将mysql添加到环境变量中"><a href="#2-3-将mysql添加到环境变量中" class="headerlink" title="2.3 将mysql添加到环境变量中"></a>2.3 将mysql添加到环境变量中</h3><p>​	1.选择 “设置 -&gt; 系统 -&gt; 系统信息 -&gt; 高级系统设置 -&gt; 高级”并点击 “环境变量”</p>
-<p><img src="/../images/image-20250809161631893.png" alt="image-20250809161631893"></p>
-<p>​	2.依次点击Path、编辑</p>
-<p><img src="/../images/image-20250809161916856.png" alt="image-20250809161916856"></p>
-<ol start="3">
-<li><p>找到mysql安装路径下的bin文件夹，点击新建将路径进行添加，再依次点击确定</p>
-<p><img src="/../images/image-20250809162436912.png" alt="image-20250809162436912"></p>
-</li>
-</ol>
-<h2 id="3-安装TANGO"><a href="#3-安装TANGO" class="headerlink" title="3.安装TANGO"></a>3.安装TANGO</h2><h3 id="3-1-双击TangoSetup-8-1-2b-win64-exe"><a href="#3-1-双击TangoSetup-8-1-2b-win64-exe" class="headerlink" title="3.1 双击TangoSetup-8.1.2b_win64.exe"></a>3.1 双击TangoSetup-8.1.2b_win64.exe</h3><p>​	<img src="/../images/image-20250809162840436.png" alt="image-20250809162840436"></p>
-<h3 id="3-2安装过程"><a href="#3-2安装过程" class="headerlink" title="3.2安装过程"></a>3.2安装过程</h3><ol>
-<li><p>点击Next</p>
-<p><img src="/../images/image-20250809162932247.png" alt="image-20250809162932247"></p>
-</li>
-<li><p>安装到tango_root文件夹下的tango文件夹中</p>
-<p><img src="/../images/image-20250809162955762.png" alt="image-20250809162955762"></p>
-<p><img src="/../images/image-20250809163009160.png" alt="image-20250809163009160"></p>
-</li>
-<li><p>点击Install</p>
-<p><img src="/../images/image-20250809163040460.png" alt="image-20250809163040460"></p>
-</li>
-<li><p>两个全勾选上后，点击Finish</p>
-<p><img src="/../images/image-20250809163058414.png" alt="image-20250809163058414"></p>
-</li>
-<li><p>点击Create</p>
-<p><img src="/../images/image-20250809163114814.png" alt="image-20250809163114814"></p>
-</li>
-</ol>
-<h3 id="3-3-添加系统变量"><a href="#3-3-添加系统变量" class="headerlink" title="3.3  添加系统变量"></a>3.3  添加系统变量</h3><ol>
-<li><p>选择 “设置 -&gt; 系统 -&gt; 系统信息 -&gt; 高级系统设置 -&gt; 高级”并点击 “环境变量”</p>
-<p><img src="/../images/image-20250809161631893-175473912871328.png" alt="image-20250809161631893"></p>
-</li>
-<li><p>点击新建，依次输入环境变量名、环境变量值，设置完成后如下图</p>
-<p><img src="/../images/image-20250809163451340.png" alt="image-20250809163451340"></p>
-<p><img src="/../images/image-20250809163457637.png" alt="image-20250809163457637"></p>
-</li>
-</ol>
-<h3 id="3-4-添加路径"><a href="#3-4-添加路径" class="headerlink" title="3.4 添加路径"></a>3.4 添加路径</h3><ol>
-<li><p>选择 “设置 -&gt; 系统 -&gt; 系统信息 -&gt; 高级系统设置 -&gt; 高级”并点击 “环境变量”</p>
-</li>
-<li><p>再依次点击Path、编辑，新建并输入“%TANGO_ROOT%\bin”,后依次点击确定完成设置</p>
-<p><img src="/../images/image-20250809163834266.png" alt="image-20250809163834266"></p>
-</li>
-</ol>
-<h3 id="3-5-继续配置"><a href="#3-5-继续配置" class="headerlink" title="3.5 继续配置"></a>3.5 继续配置</h3><ol>
-<li><p>以管理员身份运行命令提示符，进入tango安装目录下的db文件夹，输入“dir” 回车，再输入“create_db.bat” 再回车，出现“Enter password:”后可直接回车</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd tango_root/tango/share/tango/db</span><br><span class="line">dir</span><br><span class="line">create_db.bat</span><br></pre></td></tr></table></figure>
+            <h1 id="1-目录"><a href="#1-目录" class="headerlink" title="1. 目录"></a>1. 目录</h1><p>默认情况下，Hexo站点创建完成后，需手动生成目录页。如果不生成，直接点击“Categories”会出现报错。因此，我们需要在博客根目录下右击并执行“Git Bash Here”,并输入以下命令手动创建目录页：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../images/image-20250809164231486.png" alt="image-20250809164231486"></p>
-</li>
-<li><p>进入到tango安装目录下的“bin”文件夹，再输入“dir”并回车</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">cd ..</span><br><span class="line">cd ..</span><br><span class="line">cd bin</span><br><span class="line">dir</span><br></pre></td></tr></table></figure>
+<p>输入以上命令回车后，会在博客根目录下生成source&#x2F;category&#x2F;index.md，如下图：</p>
+<p><img src="/../images/image-20250811140720007.png" alt="image-20250811140720007"></p>
+<p>打开index.md进行编辑修改如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2025-08-09 15:47:00</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/../images/image-20250809164511570.png" alt="image-20250809164511570"></p>
-</li>
-<li><p>输入“create_db.bat” 再回车，出现“Ready to accept request”即配置完成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create_db.bat</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/image-20250811140841188.png" alt="image-20250811140841188"></p>
+<h1 id="2-标签"><a href="#2-标签" class="headerlink" title="2. 标签"></a>2. 标签</h1><p>与目录页同理，我们需要在博客根目录下右击并点击“Git Bash Here”,并输入以下命令创建标签页：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tag</span><br></pre></td></tr></table></figure>
 
+<p>输入以上命令回车后，会在博客根目录下生成source&#x2F;tag&#x2F;index.md，如下图：</p>
+<p><img src="/../images/image-20250811141411380.png" alt="image-20250811141411380"></p>
+<p>打开&#x2F;tag&#x2F;index.md进行编辑修改如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">layout: tag</span><br><span class="line">date: 2025-08-09 15:46:37</span><br></pre></td></tr></table></figure>
 
+<p><img src="/../images/image-20250811141549813.png" alt="image-20250811141549813"></p>
+<h1 id="3-写文章"><a href="#3-写文章" class="headerlink" title="3. 写文章"></a>3. 写文章</h1><h2 id="3-1-新建文章"><a href="#3-1-新建文章" class="headerlink" title="3.1 新建文章"></a>3.1 新建文章</h2><p>输入如下命令并回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&#x27;Hexo为文章设置目录与标签&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/../images/image-20250809164614006.png" alt="image-20250809164614006"></p>
-</li>
-</ol>
-<h2 id="4-安装完成后打开效果"><a href="#4-安装完成后打开效果" class="headerlink" title="4. 安装完成后打开效果"></a>4. 安装完成后打开效果</h2><p><img src="/../images/image-20250809164733467.png" alt="image-20250809164733467"></p>
-<p><img src="/../images/image-20250809164747554.png" alt="image-20250809164747554"></p>
-<p>​	<img src="/../images/image-20250809164758341.png" alt="image-20250809164758341"></p>
+<h2 id="3-2-设置文章目录与标签"><a href="#3-2-设置文章目录与标签" class="headerlink" title="3.2 设置文章目录与标签"></a>3.2 设置文章目录与标签</h2><p>执行完成后在&#x2F;source&#x2F;_posts生成文件“Hexo为文章设置目录与标签.md”，打开“Hexo为文章设置目录与标签.md”文件，并进行修改，设置目录category与标签tag的内容，其中“Blog”与“Hexo”为相应的文章目录与标签，如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo为文章设置目录与标签</span><br><span class="line">date: 2025-08-11 11:22:41</span><br><span class="line">category: </span><br><span class="line"><span class="bullet">  -</span> Blog</span><br><span class="line">tag:</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/image-20250811142430421.png" alt="image-20250811142430421"></p>
+<h2 id="3-3-查看设置结果"><a href="#3-3-查看设置结果" class="headerlink" title="3.3 查看设置结果"></a>3.3 查看设置结果</h2><p>之后输入以下命令，即可在<a target="_blank" rel="noopener" href="http://localhost:4000/%E4%B8%AD%E6%9F%A5%E7%9C%8B">http://localhost:4000/中查看</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>设置完成后点击首页的右上角“Categories”可以看到该分类下面的所有文章，如下图，我们新建的文章“Hexo为文章设置目录与标签”已成功分类到“Blog”中：</p>
+<p><img src="/../images/image-20250811135254123.png" alt="image-20250811135254123"></p>
+<p>点击首页的右上角“Tags”可以看到已设置好的tag：</p>
+<p><img src="/../images/image-20250811135431696.png" alt="image-20250811135431696"></p>
 
         </div>
 
@@ -345,7 +270,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://weiyunyi.github.io/2025/08/09/Windows%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%20TANGO-Control/">http://weiyunyi.github.io/2025/08/09/Windows%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%20TANGO-Control/</a></span>
+                        <span><a href="http://weiyunyi.github.io/2025/08/11/Hexo%E4%B8%BA%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%A0%87%E7%AD%BE/">http://weiyunyi.github.io/2025/08/11/Hexo%E4%B8%BA%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%A0%87%E7%AD%BE/</a></span>
                     </p>
                 
                 
@@ -369,9 +294,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"># 安装教程</a>
-                    
-                        <a href="/tags/Windows/"># Windows</a>
+                        <a href="/tags/Hexo/"># Hexo</a>
                     
                         
                 </span>
@@ -384,8 +307,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2025/08/11/Hexo%E4%B8%BA%E6%96%87%E7%AB%A0%E8%AE%BE%E7%BD%AE%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%A0%87%E7%AD%BE/">Hexo为文章设置目录与标签</a>
             
+            <a class="next" rel="next" href="/2025/08/09/Windows%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%20TANGO-Control/">Windows 安装部署 TANGO-Control</a>
             
         </section>
 

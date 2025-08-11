@@ -1361,3 +1361,23 @@ header label {
 .post-content pre .javascript .function {
   color: #8959a8;
 }
+/* 移除所有标题层级的#号 */
+.post-content h1::before,
+.post-content h2::before,
+.post-content h3::before,
+.post-content h4::before,
+.post-content h5::before,
+.post-content h6::before {
+  content: "" !important;
+}
+.post-content h1 {
+  font-size: 1.8em;
+}
+.post-content h2 {
+  font-size: 1.5em;
+  border-left: 3px solid #3498db;
+  padding-left: 10px;
+}
+.post-content h3 {
+  font-size: 1.3em;
+}
